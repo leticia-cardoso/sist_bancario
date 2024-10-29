@@ -1,7 +1,5 @@
-# sist_bancario
-Sistema bancário criado no bootcamp DIO
 
-#Criar depósito bancário: DEPOSITO | SAQUE | EXTRATO
+Programa de sistema bancário 
 
 saldo_conta = 0
 limite = 500
@@ -13,7 +11,6 @@ extrato_saque = []
 
 print("Olá, seja bem-vindo(a) à sua conta bancária!" "\n")
 
-#depósito: apenas valores positivos, depósito armazenado numa variavel e exibido no extrato
 def deposito(): 
     valor_deposito = float(input("Qual o valor deseja depositar na sua conta? "))
     if valor_deposito < 0:
@@ -24,8 +21,6 @@ def deposito():
         print("Depósito realizado com sucesso!" "\n")
         extrato_deposito.append(valor_deposito)
 
-#saque: valor menor ou igual ao saldo na conta, possível apenas 3 saques diários, com limite máximo de 500 reais por saque. 
-#se não tiver dinheiro suficiente informar o erro e criar variavel armazenando os saques e exibir no extrato
 def saque():
     valor_saque = float(input("Qual valor deseja sacar? "))
     global saldo_conta
@@ -43,7 +38,6 @@ def saque():
     else:
         print("Erro. Limite de número de saques atingido." "\n")
 
-#extrato: lista todos os depósitos e saques e valor atual da conta, formatado em R$00.00
 def extrato():
     global extrato_deposito
     global extrato_saque
