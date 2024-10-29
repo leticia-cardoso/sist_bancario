@@ -56,8 +56,7 @@ def extrato():
             print(f"{i}. {extrato_saque}")
     else:
         print("Nenhum saque realizado." "\n")
-
-#Menu com as opções
+        
 while True:
     menu = int(input('''Digite o número da opção desejada:
        1 - Depósito
